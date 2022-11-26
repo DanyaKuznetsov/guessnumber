@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+}
+.container{
+    max-width: 500px;
+    width: 100%;
+    background: #4967CF;
+    border-radius: 50px 0;
+    text-align: center;
+    padding: 31px 0 178px 0;
+    margin-bottom: 47px;
+    position: relative;
+    overflow: hidden;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Jura', sans-serif;
+}
+.buttons{
+    display: inline-grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(3, 60px);
+    gap: 8px;
+    margin: auto;
+    pointer-events: none;
+}
+@media(max-width: 500px){
+    .buttons{
+        grid-template-columns: repeat(5, 50px);
+        grid-template-rows: repeat(3, 50px);    
+    }
+}
+.newgame{
+    grid-column: 1/6;
+}
+button{
+    font-family: 'Jura', sans-serif;
+    background: #75A6F1;
+    outline: none;
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    color: #FFFFFF;
+    transition: all 0.5s;
+    pointer-events: visible;
+    cursor: pointer;
+}
+.buttons button:hover{
+    background: #FFFFFF;
+    color: #75A6F1;
+
+}
+hr{
+    width: 90%;
+    height: 2px;
+    border: none;
+    background: #FFFFFF;
+    margin: auto;
+    margin-bottom: 56px;
+}
+h1{
+    margin: 0 0 21px 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 57px;
+    color: #FFFFFF;
+}
+.try{
+    width: 100%;
+    height: 36px;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    text-align: center;
+    background: #3251BD;
+    position: absolute;
+    bottom: 70px;
+    padding: 17px 0;
+}
+.start{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: #2343B3;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 17px 0;
+}
+@media(max-width: 500px){
+    .start, .try{
+        font-size: 24px;
+        line-height: 140%;
+    }
+}
+.not-active{
+    opacity: 0.5;
+    pointer-events: none;
+}
+.buttons .not-active:hover{
+    color: #FFFFFF;
+    background: #75A6F1;
+    cursor: default;
+}
+.winner{
+    transform: scale(140%);
+    background: green;
+    z-index: 10;
+}
+.buttons .winner:hover{
+    background: green;
+    color: white;
+}
